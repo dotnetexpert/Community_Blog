@@ -1,12 +1,33 @@
 @import "../../styles//variables.scss";
 
-
-
-.image-upload{ .MuiButtonBase-root {
-  width: 100%;
-  background: transparent !important;}
+.image-upload {
+  .MuiButtonBase-root {
+    width: 100%;
+    background: transparent !important;
+    height: 100px;
+    border-style: dashed;
+  }
 }
-button.cancel-btn {
-  color: #818181;
-  background: transparent !important;
+
+.footer-bottom {
+  border-top: 1px solid #ddd;
+  padding: 10px 15px !important;
+  button.cancel-btn {
+    background: transparent !important;
+  }
+}
+.image-preview {
+  img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 1px solid #dddddd;
+  }
+  button {
+    padding: 5px !important;
+    svg {
+      height: 18px;
+      width: 18px;
+    }
+  }
 }

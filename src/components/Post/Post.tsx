@@ -60,6 +60,7 @@ const Post: React.FC<PostProps> = ({ post }) => {
         onMouseLeave={() => setIsHovered(false)}
       >
         <div
+          className="post-actions"
           style={{
             position: "absolute",
             top: 8,

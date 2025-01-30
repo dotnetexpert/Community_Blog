@@ -32,4 +32,16 @@
       }
     }
   }
+  .post-actions {
+    button {
+      padding: 5px;
+      svg {
+        height: 20px;
+        width: 20px;
+      }
+      &:hover {
+        background-color: #ffffff;
+      }
+    }
+  }
 }

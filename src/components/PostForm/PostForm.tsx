@@ -129,6 +129,7 @@ const PostForm: React.FC<PostFormProps> = ({ open, onClose, post }) => {
               fullWidth
               margin="normal"
               label="Title"
+              size="small"
               variant="outlined"
               value={title}
               onChange={(e) => setTitle(e.target.value)}
@@ -170,7 +171,12 @@ const PostForm: React.FC<PostFormProps> = ({ open, onClose, post }) => {
             </Box>
 
             {image && (
-              <Box mt={2} position="relative" width="fit-content">
+              <Box
+                mt={2}
+                position="relative"
+                width="fit-content"
+                className="image-preview"
+              >
                 <img
                   src={image}
                   alt="Preview"
@@ -193,8 +199,8 @@ const PostForm: React.FC<PostFormProps> = ({ open, onClose, post }) => {
           </form>
         </DialogContent>
 
-        <DialogActions>
-          <Button onClick={onClose} className="cancel-btn">
+        <DialogActions className="footer-bottom">
+          <Button onClick={onClose} className="cancel-btn" variant="outlined">
             Cancel
           </Button>
           <Button
@@ -202,6 +208,7 @@ const PostForm: React.FC<PostFormProps> = ({ open, onClose, post }) => {
             variant="contained"
             color="primary"
             onClick={handleSubmit}
+            size="medium"
           >
             {post ? "Update Post" : "Create Post"}
           </Button>
