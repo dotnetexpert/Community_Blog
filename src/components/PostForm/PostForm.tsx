@@ -107,7 +107,7 @@ const PostForm: React.FC<PostFormProps> = ({ open, onClose, post }) => {
   };
   return (
     <>
-      <Dialog open={open} onClose={onClose} maxWidth="sm" fullWidth>
+      <Dialog open={open} onClose={onClose} maxWidth="lg" fullWidth>
         <DialogTitle>
           <Box
             display="flex"
