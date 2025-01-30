@@ -8,6 +8,8 @@ A community page application with nested comments functionality, built using Rea
 
 📝 Create new posts
 
+✏️ Edit and delete posts
+
 💬 Add comments to posts
 
 🔗 Nested comment threading for better discussions
