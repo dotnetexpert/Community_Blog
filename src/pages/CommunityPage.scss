@@ -1,0 +1,264 @@
+@import "../styles/global.scss";
+
+// Color Palette
+$primary: #2563eb;
+$secondary: #f0f4f8;
+$accent: #1e293b;
+$white: #ffffff;
+$shadow: rgba(0, 0, 0, 0.1);
+
+// Page Layout
+.page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px;
+  background: $secondary;
+  min-height: 100vh;
+}
+
+// Header Section
+header {
+  text-align: center;
+  margin-bottom: 40px;
+
+  h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: $accent;
+  }
+
+  nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+
+    .create-post-btn {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: $primary;
+      color: $white;
+      font-size: 18px;
+      padding: 14px 24px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s ease;
+
+      &:hover {
+        background: darken($primary, 10%);
+        transform: scale(1.05);
+      }
+    }
+  }
+}
+
+// Post Grid
+.posts {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  padding-bottom: 40px;
+}
+
+// Post Card Styling
+
+.banner {
+  background: url("../../public/images/banner-bg.jpg");
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(1, 98, 232, 0.7);
+    top: 0;
+    left: 0;
+  }
+
+  .container {
+    border-bottom: 1px solid #dddddd;
+    padding: 80px 0;
+    position: relative;
+    z-index: 1;
+
+    h1 {
+      max-width: 670px;
+      font-size: 50px;
+      margin: 0 auto;
+      color: #ffffff;
+    }
+
+    p {
+      font-size: 18px;
+      max-width: 720px;
+      margin: 20px auto 0;
+      line-height: 1.5;
+      color: #ffffff;
+    }
+  }
+}
+
+.post-main-wrapper {
+  padding: 50px 0;
+
+  .section-title {
+    margin: 0 0 20px;
+    font-size: 24px;
+    color: #031b4e;
+    text-transform: uppercase;
+  }
+
+  .latest-post {
+    width: 75%;
+  }
+
+  .featured-posts {
+    width: 370px;
+  }
+
+  .post-form-wrapper {
+    .post-card {
+      width: calc(50% - 16px);
+      margin-bottom: 16px;
+    }
+
+    .posts-main-wrapper {
+      display: flex;
+      gap: 32px;
+
+    }
+  }
+}
+
+
+// Responsive Design
+@media (max-width: 768px) {
+  .page {
+    padding: 16px;
+  }
+
+  .posts {
+    grid-template-columns: 1fr;
+  }
+
+  .create-post-btn {
+    width: 100%;
+  }
+}
+
+
+
+@media screen and (max-width:1399px) {
+  .post-main-wrapper {
+    padding: 50px 15px;
+  }
+}
+
+@media screen and (max-width:991px) {
+  .post-main-wrapper {
+    display: block;
+
+    .latest-post {
+      width: 100%;
+    }
+
+    .featured-posts {
+      width: 100%;
+    }
+  }
+
+  .featured-post-main-wrapper {
+    display: flex;
+    gap: 24px;
+    width: 100%;
+
+    .post-card {
+      width: 100%;
+    }
+  }
+
+}
+
+@media screen and (max-width: 767px) {
+  .post-main-wrapper {
+    .post-form-wrapper {
+      .posts-main-wrapper {
+        display: block;
+      }
+
+      .post-card {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+    }
+
+    .featured-posts {
+      max-width: 100%;
+    }
+  }
+
+  .post-card {
+    .MuiCard-root {
+      img {
+        height: 300px;
+      }
+
+      .MuiCardContent-root {
+        .post-title {
+          font-size: 20px;
+        }
+
+        .post-description {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  .logo-main {
+    max-width: 100px;
+  }
+
+  header {
+    h6 {
+      display: none;
+    }
+  }
+
+  .banner {
+    .container {
+      padding: 40px 0;
+
+      h1 {
+        font-size: 36px;
+      }
+
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+
+  .featured-post-main-wrapper {
+    display: block;
+  }
+
+  .post-detail-wrapper {
+    .comments-wrapper {
+      padding-left: 0;
+    }
+  }
+
+}
+
+@media screen and (max-width: 499px) {
+  .banner {
+    .container {
+      h1 {
+        font-size: 28px;
+      }
+    }
+  }
+}

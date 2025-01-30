@@ -1,0 +1,33 @@
+body{
+    .post-card{
+&.featured-post-card{
+    .MuiCard-root {
+        position: relative;
+        .MuiCardContent-root {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            display: flex;
+            align-items: end;
+            padding: 10px;
+            background: rgba(0,0,0, 0.3);
+            border-radius: 19px;
+            transition: 0.2s ease-in-out;
+           -webkit-transition: 0.2s ease-in-out;
+           -moz-transition: 0.2s ease-in-out;
+        }
+        .post-title {
+            font-size: 21px;
+           color: #fff;
+        }        
+    }
+    &:hover{
+        .MuiCardContent-root {
+            background: rgba(0,0,0, 0.5);
+        }
+    }
+}
+ 
+}
+}

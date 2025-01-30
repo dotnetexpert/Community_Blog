@@ -1,0 +1,54 @@
+@import "../../styles//variables.scss";
+
+.comments-heading {
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-bottom: 1px solid #ddd;
+  line-height: 15px;
+
+  span {
+    border-bottom: 2px solid #333;
+    padding-bottom: 4px;
+    display: inline-block;
+    font-weight: 600;
+  }
+}
+
+.comments-wrapper {
+  p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--color-secondary);
+  }
+
+  .blogauthor-date {
+    span {
+      font-size: 14px;
+      margin-top: 4px;
+      color: var(--color-secondary);
+    }
+  }
+
+  .reply-btn {
+    button {
+      padding: 0;
+
+      svg {
+        fill: #93959a !important;
+      }
+    }
+  }
+}
+
+.comment-textarea {
+  .MuiInputBase-root {
+    background: #fff;
+    border-radius: 10px;
+  }
+}
+
+.comment-textarea {
+  border-top: 1px solid #dfe0e1;
+  padding-top: 20px;
+}

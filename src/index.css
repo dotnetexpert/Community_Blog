@@ -1,0 +1,60 @@
+@import '/src/styles/variables.scss';
+
+body {
+  margin: 0;
+  font-family: var( --primary-font);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+body, p, div, span, h1, h2, h3, h4, h5, h6{font-family: var( --primary-font) !important;}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.container {
+  width: 100%;
+  max-width: 1240px;
+  margin: auto;
+}
+
+header.header-wrapper {
+  background: #fcfcff;
+  box-shadow: none;
+  color: #333333;
+  margin: 0;
+}
+.inner-container{padding: 0 22px;}
+.text-center{text-align: center;}
+
+.MuiButton-colorPrimary {
+  background: var(--bg-primary) !important;
+}
+header .MuiButton-colorPrimary {
+  background: linear-gradient(227deg, #324eb9 0%, #4750d8 100%) !important;  
+} 
+.text-gradient {
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+main {
+  background: var(--bg-body);
+}
+.d-flex {
+  display: flex;
+}
+.flex-wrap{flex-wrap: wrap;}
+.justify-content-between{justify-content: space-between;}
+.gap10 {
+  gap: 10px;
+}
+.gap15 {
+  gap: 15px;
+}
+.gap25 {
+  gap: 25px;
+}
+.gap48 {
+  gap: 48px;
+}
